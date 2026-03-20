@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GigShield AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>GigShield AI</h1>
+<p>AI-Powered Insurance for Gig Workers</p>
+
+<!-- AUTH -->
+<div id="auth">
+    <h2 id="formTitle">Login</h2>
+
+    <input type="email" id="email" placeholder="Enter Email"><br><br>
+    <input type="password" id="password" placeholder="Enter Password"><br><br>
+
+    <button onclick="login()">Continue</button>
+
+    <p onclick="toggleForm()" class="link">
+        Don't have an account? Sign up
+    </p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" style="display:none;">
+    <h2>Welcome Delivery Partner 🚴</h2>
+
+    <p><b>Weekly Premium:</b> ₹50</p>
+    <p><b>Coverage:</b> Income loss due to disruptions</p>
+
+    <hr>
+
+    <h3>Simulate Disruption</h3>
+
+    <button onclick="triggerDisruption('Heavy Rain')">🌧 Heavy Rain</button>
+    <button onclick="triggerDisruption('Extreme Heat')">🔥 Extreme Heat</button>
+    <button onclick="triggerDisruption('High Pollution')">🌫 High Pollution</button>
+</div>
+
+<!-- CLAIM -->
+<div id="claim" style="display:none;">
+    <h2>✅ Claim Auto-Triggered</h2>
+
+    <p id="reason"></p>
+    <p id="amount"></p>
+
+    <p>✔ AI detected disruption</p>
+    <p>✔ No manual claim needed</p>
+
+    <button onclick="goBack()">⬅ Back to Dashboard</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
